@@ -10,18 +10,10 @@ bot.on('message', async (msg) => {
   const text = msg.text;
 
   if(text == '/start') {
-    await bot.sendMessage(chatId, 'Нажми меня 👇', {
-        reply_markup: {
-            keyboard: [
-                [{text: 'Заполни меня буквами'}, {text: 'Заполни меня словами'}]
-            ]
-        }
-    });
-
-    await bot.sendMessage(chatId, 'Перейти на сайт', {
+    await bot.sendMessage(chatId, '💱 Добро пожаловать в виртуальный обменник! 💵', {
         reply_markup: {
             inline_keyboard: [
-                [{text: '💁👌🎍😍', web_app: {url: webAppUrl}}]
+                [{text: 'ОБМЕНЯТЬ 💸', web_app: {url: webAppUrl}}]
             ]
         }
     });
