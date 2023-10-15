@@ -10,19 +10,14 @@ bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
   const text = msg.text;
 
-  if(text == '/start') {
-    await bot.sendPhoto(chatId,"https://w0.peakpx.com/wallpaper/148/2/HD-wallpaper-business-money-transfer-euro-bundle-of-money-payment-businessmen.jpg" );
+  if (text == '/start') {
     await bot.sendMessage(chatId, '💱 Добро пожаловать в виртуальный обменник! 💵  Настоящая версия: MVP v.0.5 (beta 0.1). Доступен архив:', {
-        reply_markup: {
-            inline_keyboard: [
-                [{text: 'prototype 💸', web_app: {url: webAppUrlOne}}, {text: 'alpha v.0.1 💰', web_app: {url: webAppUrlTwo}}]
-            ]
-        }
+      reply_markup: {
+        inline_keyboard: [
+          [{text: 'prototype 💸', web_app: {url: webAppUrlOne}}, {text: 'alpha v.0.1 💰', web_app: {url: webAppUrlTwo}}]
+        ]
+      }
     });
   }
-
-  if(text == 'idiot') {
-    await bot.kickChatMember(chatId,  msg.from.id);
-  }
-
+  
 });
