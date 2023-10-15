@@ -20,18 +20,18 @@ bot.on('message', async (msg) => {
     });
   }
 
-  const hello = "hello";
-  if (msg.text.toString().toLowerCase().indexOf(hello) === 0) {
-    await bot.sendMessage(msg.from.id, "Hello  " + msg.from.first_name, {
+var Hi = 'hi';
+if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
+    bot.sendMessage(msg.from.id, 'Hello  ' + msg.from.first_name, {
       reply_markup: {
-        keyboard: [{text: 'prototype 💸', web_app: {url: webAppUrlOne}}, {text: 'alpha v.0.1 💰', web_app: {url: webAppUrlTwo}},   ["Познать силу"]]
+        keyboard: [{text: 'prototype 💸', web_app: {url: webAppUrlOne}}, {text: 'alpha v.0.1 💰', web_app: {url: webAppUrlTwo}},   ['Познать силу']]
       }
     });
   }
 
-  const kickme = "Познать силу";
+  var kickme = 'Познать силу';
     if (msg.text.includes(kickme)) {
-      await bot.kickChatMember(msg.chat.id,  msg.from.id);
+      bot.kickChatMember(msg.chat.id,  msg.from.id);
   }
 
 });
