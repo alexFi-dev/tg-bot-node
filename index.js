@@ -20,7 +20,7 @@ bot.on('message', async (msg) => {
     });
   }
 
-  const Hi = "hello";
+  const hello = "hello";
   if (msg.text.toString().toLowerCase().indexOf(hello) === 0) {
     await bot.sendMessage(msg.from.id, "Hello  " + msg.from.first_name, {
       reply_markup: {
