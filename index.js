@@ -11,7 +11,7 @@ bot.on('message', async (msg) => {
   const text = msg.text;
 
   if(text == '/start') {
-    await bot.sendMessage(chatId, '💱 Добро пожаловать в виртуальный обменник! 💵  Настоящая версия: MVP v.0.4 (beta 0.1). Доступен архив:', {
+    await bot.sendMessage(chatId, '💱 Добро пожаловать в виртуальный обменник! 💵  Настоящая версия: MVP v.0.5 (beta 0.1). Доступен архив:', {
         reply_markup: {
             inline_keyboard: [
                 [{text: 'prototype 💸', web_app: {url: webAppUrlOne}}, {text: 'alpha v.0.1 💰', web_app: {url: webAppUrlTwo}}]
@@ -19,4 +19,30 @@ bot.on('message', async (msg) => {
         }
     });
   }  
+
+  const Hi = "hi";
+  const hi = "hi";
+  if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
+    bot.sendMessage(msg.from.id, "Hello  " + msg.from.first_name);
+  }
+  if (msg.text.toString().toLowerCase().indexOf(hi) === 0) {
+    bot.sendMessage(msg.chat.id,"Hello dear user");
+  }
+  const bye = "bye";
+  if (msg.text.toString().toLowerCase().includes(bye)) {
+    bot.sendMessage(msg.chat.id, "Have a nice day " + msg.from.first_name + " Buy");
+  }
+  const robot = "I'm robot";
+  if (msg.text.indexOf(robot) === 0) {
+      bot.sendMessage(msg.chat.id, "Yes I'm robot but not in that way!");
+  }
+});
+
+bot.onText(/\/sendpic/, async (msg) => {
+  bot.sendPhoto(msg.chat.id,"https://w0.peakpx.com/wallpaper/148/2/HD-wallpaper-business-money-transfer-euro-bundle-of-money-payment-businessmen.jpg",{caption : "Находим варианты! \nПомогаем клиентам "} );
+  bot.sendMessage(msg.chat.id, "MVP v.0.5", {
+    "reply_markup": {
+        "keyboard": [["Prototype", "Alpha v.0.1"],   ["Beta v.0.1"]]
+        }
+    });
 });
