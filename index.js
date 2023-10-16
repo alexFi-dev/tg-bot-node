@@ -15,7 +15,8 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, '💱 Добро пожаловать в виртуальный обменник! 💵  Настоящая версия: MVP v.0.5 (beta 0.1). Доступен архив:', {
       reply_markup: {
         inline_keyboard: [
-          [{text: 'prototype 💸', web_app: {url: webAppUrlOne}}, {text: 'alpha v.0.1 💰', web_app: {url: webAppUrlTwo}},{text: 'IONIX UX+UI 📱', web_app: {url: webAppUrlThree}}]
+          [{text: 'prototype 💸', web_app: {url: webAppUrlOne}}, {text: 'alpha v.0.1 💰', web_app: {url: webAppUrlTwo}}],
+          [{text: 'IONIX UX+UI 📱', web_app: {url: webAppUrlThree}}]
         ]
       }
     });
